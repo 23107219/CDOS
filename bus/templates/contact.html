@@ -1,0 +1,26 @@
+{% extends 'navigation.html' %}
+{% load static %}
+{% block a %}
+<style>
+    input[type=text][type=password]{
+    border-radius:8px;
+    width:600px;
+    height:16px;
+    }
+</style>
+
+<div style="color:Black;border:1px solid white;border-radius:8px;background-color:white;padding:50px">
+
+    <h3><strong>Contact Us</strong></h3><hr>
+    <form method="post" action="">
+        {% csrf_token %}
+        User Name:<br><input type="text" placeholder="Enter user name" name="uname" style="border-radius:8px;width:600px;height:35px;"><br><br>
+        Your Email:<br><input type="email" placeholder="Enter email" name="email" style="border-radius:8px;width:600px;height:35px;"><br><br>
+        Your massage:<br><textarea  name="message" style="border-radius:8px;width:600px;height:135px;"></textarea><br><br>
+        <input type="submit" value="Send Feedback" style="color:white;border-radius:8px;width:115px;height:35px;background-color:#333;border:1px solid black">
+    </form>
+
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df5ee19f-2bad-49bd-bb0c-4a605ccf6744" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>100</find>
+      <find>route1</find>
+      <find>view</find>
+      <find>card</find>
+      <find>add</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>86</replace>
+    </replaceStrings>
+  </component>
+  <component name="ProjectId" id="1qsjy6m04XdC6ZehIeS6vUYs1YA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="F:/RailwayReservationDjango/2updated/RailwayReservationDjango" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BHUWAN BHASKAR\Desktop\Busmanagment\bus\templates" />
+      <recent name="C:\Users\hp\Desktop\Busmanagment\bus" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df5ee19f-2bad-49bd-bb0c-4a605ccf6744" name="Default Changelist" comment="" />
+      <created>1576236503358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576236503358</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="66" key="FileChooserDialogImpl" timestamp="1617953734225">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="66" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617953734225" />
+    <state x="309" y="152" key="com.intellij.ide.util.TipDialog" timestamp="1617953684032">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="309" y="152" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617953684032" />
+  </component>
+</project>
