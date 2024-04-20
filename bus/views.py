@@ -197,7 +197,7 @@ def Card_Detail(request,total,coun,route1,pid):
                 
                 # Create topic for SNS
                 region='us-east-1'
-                topic_name = 'bus-email'
+                topic_name = 'bus-email-test'
                 region
                 topic_response = create_topic(topic_name)
                 a_subscriber = subscribe_to_topic(topic_name)
