@@ -201,7 +201,7 @@ def Card_Detail(request,total,coun,route1,pid):
                 region
                 topic_response = create_topic(topic_name)
                 a_subscriber = subscribe_to_topic(topic_name)
-                # sns_email(topic_response,a_subscriber,topic_response,region)
+                sns_email(topic_response,a_subscriber,str(topic_response),region)
         return redirect('my_booking')
 
     total1=total
