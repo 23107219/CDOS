@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate,logout,login
 from django.contrib.auth.models import User
 from .models import *
 from django.contrib import messages
+import boto3
 
 # Create your views here.
 def nav(request):
@@ -197,12 +198,28 @@ def Card_Detail(request,total,coun,route1,pid):
 def my_booking(request):
     if not request.user.is_authenticated:
         return redirect('login')
+    
+    # Your existing code to fetch user and booking details
     user2 = User.objects.filter(username=request.user.username).get()
     user1 = Register.objects.filter(user=user2).get()
     pro = Passenger.objects.filter(user=user1)
     book = Book_ticket.objects.filter(user=user1)
-    d = {'user':user1,'pro':pro,'book':book}
-    return render(request,'my_booking.html',d)
+    
+    # Construct message with user and booking details
+    message = f"User: {user1}, Passenger: {pro}, Booking: {book}"
+
+    # Publish message to SNS topic
+    sns_client = boto3.client('sns', region_name='eu-west-1')  # Replace 'your-region' with your AWS region
+    topic_arn = 'arn:aws:sns:eu-west-1:250738637992:x23107219-topic'  # Replace 'your-topic-arn' with the ARN of your SNS topic
+    sns_client.publish(
+        TopicArn=topic_arn,
+        Message=message,
+        Subject='Booking Details'
+    )
+
+    d = {'user':user1, 'pro':pro, 'book':book}
+    return render(request, 'my_booking.html', d)
+
 
 def delte_my_booking(request,pid):
     if not request.user.is_authenticated:
