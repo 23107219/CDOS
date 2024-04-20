@@ -202,7 +202,7 @@ def my_booking(request):
     if not request.user.is_authenticated:
         return redirect('login')
     
-    try:
+   # try:
         # Your existing code to fetch user and booking details
         user2 = User.objects.filter(username=request.user.username).get()
         user1 = Register.objects.filter(user=user2).get()
@@ -213,18 +213,18 @@ def my_booking(request):
         message = f"User: {user1}, Passenger: {pro}, Booking: {book}"
 
         # Publish message to SNS topic
-        sns_client = boto3.client('sns', region_name='eu-west-1')  # Replace 'your-region' with your AWS region
-        topic_arn = 'arn:aws:sns:eu-west-1:250738637992:x23107219-topic'  # Replace 'your-topic-arn' with the ARN of your SNS topic
-        sns_client.publish(
-            TopicArn=topic_arn,
-            Message=message,
-            Subject='Booking Details'
-        )
-    except ClientError as e:
-        # Handle specific SNS client errors
-        error_message = f"An error occurred while publishing to SNS: {e.response['Error']['Message']}"
-        # Log the error message or handle it in any other way suitable for your application
-        return HttpResponseServerError("Error occurred while publishing to SNS")
+        # sns_client = boto3.client('sns', region_name='eu-west-1')  # Replace 'your-region' with your AWS region
+        # topic_arn = 'arn:aws:sns:eu-west-1:250738637992:x23107219-topic'  # Replace 'your-topic-arn' with the ARN of your SNS topic
+        # sns_client.publish(
+            # TopicArn=topic_arn,
+    #         Message=message,
+    #         Subject='Booking Details'
+    #     )
+    # except ClientError as e:
+    #     # Handle specific SNS client errors
+    #     error_message = f"An error occurred while publishing to SNS: {e.response['Error']['Message']}"
+    #     # Log the error message or handle it in any other way suitable for your application
+    #     return HttpResponseServerError("Error occurred while publishing to SNS")
 
     d = {'user': user1, 'pro': pro, 'book': book}
     return render(request, 'my_booking.html', d)
