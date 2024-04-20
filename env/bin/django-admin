@@ -1,4 +1,4 @@
-#!/Users/harshdeore/Desktop/CPP/Busmanagment/env/bin/python3
+#!/home/ec2-user/environment/CDOS/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/harshdeore/Desktop/CPP/Busmanagment/env"
+VIRTUAL_ENV="/home/ec2-user/environment/CDOS/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
