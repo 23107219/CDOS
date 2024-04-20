@@ -6,6 +6,7 @@ from django.contrib import messages
 import boto3
 from botocore.exceptions import ClientError
 from django.http import HttpResponseServerError
+from .sns import *
 
 
 # Create your views here.
@@ -191,6 +192,16 @@ def Card_Detail(request,total,coun,route1,pid):
             if i.status != "set":
                 i.status="set"
                 i.save()
+        # SNS notification
+                print("inside for loop")
+                
+                # Create topic for SNS
+                region='us-east-1'
+                topic_name = 'bus-email'
+                region
+                topic_response = create_topic(topic_name)
+                a_subscriber = subscribe_to_topic(topic_name)
+                sns_email(topic_response,a_subscriber,topic_response,region)
         return redirect('my_booking')
 
     total1=total
