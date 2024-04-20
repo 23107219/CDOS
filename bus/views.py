@@ -5,6 +5,8 @@ from .models import *
 from django.contrib import messages
 import boto3
 from botocore.exceptions import ClientError
+from django.http import HttpResponseServerError
+
 
 # Create your views here.
 def nav(request):
