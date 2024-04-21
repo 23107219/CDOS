@@ -75,10 +75,14 @@ WSGI_APPLICATION = 'Busmanagment.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': ‘busdb',
+        'USER': 'postgres',
+        'PASSWORD': ‘Harshdeore123’,
+        'HOST': 'busdb.c14q2k6akz5v.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
+    }
 }
 
 
